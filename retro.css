@@ -1,0 +1,65 @@
+:root {
+  --red: #e74a4c;
+  --blue: #60b8d7;
+  --orange: #ff9f35;
+  --green: #56a379;
+  --angle: 0deg;
+}
+body {
+  margin: 0%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: repeating-conic-gradient(
+    var(--blue) var(--angle) calc(var(--angle) + 10deg),
+    white calc(var(--angle) + 10deg) calc(var(--angle) + 20deg),
+    var(--orange) calc(var(--angle) + 20deg) calc(var(--angle) + 30deg),
+    white calc(var(--angle) + 30deg) calc(var(--angle) + 40deg),
+    var(--green) calc(var(--angle) + 40deg) calc(var(--angle) + 50deg),
+    white calc(var(--angle) + 50deg) calc(var(--angle) + 60deg),
+    var(--red) calc(var(--angle) + 60deg) calc(var(--angle) + 70deg),
+    white calc(var(--angle) + 70deg) calc(var(--angle) + 80deg)
+  );
+
+  animation: bgrotate 3s linear infinite;
+}
+@keyframes bgrotate {
+  0% {
+    --angle: 0deg;
+  }
+  25% {
+    --angle: 90deg;
+  }
+  50% {
+    --angle: 180deg;
+  }
+  75% {
+    --angle: 270deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+.container {
+  height: 325px;
+  width: 325px;
+  border-radius: 5%;
+  background: black;
+  position: absolute;
+  display: grid;
+  place-items: center;
+}
+.content {
+  position: absolute;
+  color: white;
+}
+img {
+  height: 300px;
+  width: 300px;
+  border-radius: 15px;
+}
