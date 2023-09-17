@@ -63,3 +63,14 @@ img {
   width: 300px;
   border-radius: 15px;
 }
+@media screen and (max-width:650px) {
+  .container {
+    height: 300px;
+    width: 300px;
+  }
+  img {
+    height: 275px;
+    width: 275px;
+    border-radius: 15px;
+  }
+}
